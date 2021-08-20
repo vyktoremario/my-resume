@@ -671,12 +671,14 @@
                   </div>
                   <div class="mt-5 d-print-none">
                     <form
-                      action="https://formspree.io/your@email.com"
+                      id="contact-form"
+                      action="send"
                       method="POST"
                     >
                       <div class="form-outline mb-4">
                         <input
                           type="text"
+                          name="name"
                           id="name"
                           class="form-control"
                           required
@@ -686,6 +688,7 @@
                       <div class="form-outline mb-4">
                         <input
                           type="email"
+                          name="email"
                           id="email"
                           class="form-control"
                           required
@@ -695,16 +698,27 @@
                         >
                       </div>
                       <div class="form-outline mb-4">
+                        <input
+                          type="text"
+                          name="subject"
+                          id="subject"
+                          class="form-control"
+                          required
+                        />
+                        <label class="form-label" for="subject">Subject</label>
+                      </div>
+                      <div class="form-outline mb-4">
                         <textarea
                           class="form-control"
                           style="resize: none"
+                          name="message"
                           id="message"
                           rows="4"
                           required
                         ></textarea>
                         <label class="form-label" for="message">Message</label>
                       </div>
-                      <button class="btn btn-info btn-block mb-4" type="submit">
+                      <button class="btn btn-info btn-block mb-4" type="submit" value="submit">
                         Send
                       </button>
                     </form>
@@ -797,7 +811,8 @@
         </div>
       </div>
     </footer>
-    <script src="/scripts/mdb.min.js"></script>
+    <!-- <script src="/scripts/mdb.min.js"></script> -->
+    <script src="/javascripts/contact-form.js"></script>
     <script src="/scripts/aos.js"></script>
     <script src="/scripts/main.js"></script>
   </body>
