@@ -140,3 +140,41 @@ footer a:not(.nav-link) {
   .page-break {
     padding-top: 5rem;
     page-break-before: always; } }
+
+#status {
+  width: 90%;
+  max-width: 500px;
+  min-height: 40px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+  align-self: center;
+}
+
+#status.success {
+  background: rgb(181, 252, 74);
+  animation: status 4s ease-out forwards;
+
+}
+#status.error {
+  background: rgb(231, 65, 15);
+  color: #fff;
+  animation: status 4s ease-out forwards;
+
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
